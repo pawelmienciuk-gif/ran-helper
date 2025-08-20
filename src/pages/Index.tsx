@@ -578,14 +578,14 @@ const Index = () => {
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-xl card-shadow overflow-hidden mb-6">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2373.234567890123!2d18.004932!3d53.130247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470312b8b8b8b8b8%3A0x1234567890abcdef!2sMarii%20Konopnickiej%2026%2C%2085-124%20Bydgoszcz!5e0!3m2!1spl!2spl!4v1735660800000"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2394.862716812884!2d17.998367599999998!3d53.112657299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4703130bc0070de5%3A0xc580d0f097c377de!2sLekarz%20od%20ran%20%E2%80%93%20IPL%20Magdalena%20Mie%C5%84ciuk%20-%20chirurg!5e0!3m2!1spl!2spl!4v1755669542021!5m2!1spl!2spl"
                 width="100%"
                 height="400"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Lokalizacja gabinetu - ul. Marii Konopnickiej 26, Bydgoszcz"
+                title="Lekarz od ran – IPL Magdalena Mieńciuk - chirurg"
               />
             </div>
             
