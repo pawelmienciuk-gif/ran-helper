@@ -568,6 +568,56 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Google Maps Section */}
+      <section id="mapa" className="py-16 bg-card">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-primary mb-8">
+            Lokalizacja gabinetu
+          </h2>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-xl card-shadow overflow-hidden mb-6">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2373.234567890123!2d18.004932!3d53.130247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470312b8b8b8b8b8%3A0x1234567890abcdef!2sMarii%20Konopnickiej%2026%2C%2085-124%20Bydgoszcz!5e0!3m2!1spl!2spl!4v1735660800000"
+                width="100%"
+                height="400"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Lokalizacja gabinetu - ul. Marii Konopnickiej 26, Bydgoszcz"
+              />
+            </div>
+            
+            <div className="text-center space-y-4">
+              <div className="bg-background p-4 rounded-lg border">
+                <MapPin className="w-6 h-6 text-primary mx-auto mb-2" />
+                <a 
+                  href="https://maps.app.goo.gl/xgDVmBRg1ijQfdPw7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline font-semibold"
+                >
+                  ul. Marii Konopnickiej 26<br />
+                  85-124 Bydgoszcz
+                </a>
+              </div>
+              
+              <Button variant="medical" size="lg" asChild>
+                <a 
+                  href="https://maps.app.goo.gl/xgDVmBRg1ijQfdPw7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <MapPin className="w-5 h-5" />
+                  Wyznacz trasę
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-primary text-primary-foreground py-8">
         <div className="container mx-auto px-4 text-center">
