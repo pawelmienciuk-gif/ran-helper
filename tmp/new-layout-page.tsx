@@ -1,31 +1,22 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { 
-  ChevronDown, 
-  ChevronUp, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  Award, 
-  Users, 
-  Heart,
-  ExternalLink
-} from "lucide-react";
-import { useState } from "react";
+"use client"
 
-const Index = () => {
-  const [expandedService, setExpandedService] = useState<string | null>(null);
-  const [expandedCertificate, setExpandedCertificate] = useState<string | null>(null);
+import { useState } from "react"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { ChevronDown, ChevronUp, Phone, Mail, MapPin, Clock, Award, Users, Heart } from "lucide-react"
+
+export default function MedicalWebsite() {
+  const [expandedService, setExpandedService] = useState<string | null>(null)
+  const [expandedCertificate, setExpandedCertificate] = useState<string | null>(null)
 
   const toggleService = (serviceId: string) => {
-    setExpandedService(expandedService === serviceId ? null : serviceId);
-  };
+    setExpandedService(expandedService === serviceId ? null : serviceId)
+  }
 
   const toggleCertificate = (certId: string) => {
-    setExpandedCertificate(expandedCertificate === certId ? null : certId);
-  };
+    setExpandedCertificate(expandedCertificate === certId ? null : certId)
+  }
 
   const services = [
     {
@@ -71,7 +62,7 @@ const Index = () => {
       details:
         "Przeszczepy skóry stosowane są w przypadku dużych ubytków skórnych. Wykonujemy przeszczepy pełnoskórne i częściowoskórne, przeszczepy z siatką oraz nowoczesne substytuty skóry.",
     },
-  ];
+  ]
 
   const certificates = [
     {
@@ -98,7 +89,7 @@ const Index = () => {
       details:
         "Certyfikat specjalisty terapii kompresyjnej, obejmujący nowoczesne techniki bandażowania i doboru wyrobów kompresyjnych.",
     },
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
@@ -305,7 +296,7 @@ const Index = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Telefon</h4>
-                  <p className="text-gray-600">+48 509 075 786</p>
+                  <p className="text-gray-600">+48 123 456 789</p>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
@@ -314,7 +305,7 @@ const Index = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Email</h4>
-                  <p className="text-gray-600">kontakt@lekarzodran.pl</p>
+                  <p className="text-gray-600">kontakt@drmieńciuk.pl</p>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
@@ -323,16 +314,11 @@ const Index = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Adres</h4>
-                  <a 
-                    href="https://maps.app.goo.gl/xgDVmBRg1ijQfdPw7"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-600 hover:text-blue-600 transition-colors"
-                  >
-                    ul. Marii Konopnickiej 26
+                  <p className="text-gray-600">
+                    ul. Medyczna 123
                     <br />
-                    85-124 Bydgoszcz
-                  </a>
+                    00-001 Warszawa
+                  </p>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
@@ -394,56 +380,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Google Maps Section */}
-      <section id="mapa" className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
-            Lokalizacja gabinetu
-          </h2>
-          
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-6">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2394.862716812884!2d17.998367599999998!3d53.112657299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4703130bc0070de5%3A0xc580d0f097c377de!2sLekarz%20od%20ran%20%E2%80%93%20IPL%20Magdalena%20Mie%C5%84ciuk%20-%20chirurg!5e0!3m2!1spl!2spl!4v1755669542021!5m2!1spl!2spl"
-                width="100%"
-                height="400"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Lekarz od ran – IPL Magdalena Mieńciuk - chirurg"
-              />
-            </div>
-            
-            <div className="text-center space-y-4">
-              <div className="bg-gray-50 p-4 rounded-lg border">
-                <MapPin className="w-6 h-6 text-blue-600 mx-auto mb-2" />
-                <a 
-                  href="https://maps.app.goo.gl/xgDVmBRg1ijQfdPw7"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline font-semibold"
-                >
-                  ul. Marii Konopnickiej 26<br />
-                  85-124 Bydgoszcz
-                </a>
-              </div>
-              
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700" asChild>
-                <a 
-                  href="https://maps.app.goo.gl/xgDVmBRg1ijQfdPw7"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <MapPin className="w-5 h-5 mr-2" />
-                  Wyznacz trasę
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -465,7 +401,5 @@ const Index = () => {
         </div>
       </footer>
     </div>
-  );
-};
-
-export default Index;
+  )
+}
